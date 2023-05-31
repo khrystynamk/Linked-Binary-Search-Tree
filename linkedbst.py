@@ -331,18 +331,27 @@ class LinkedBST(AbstractCollection):
 
     @staticmethod
     def get_file_data(path):
+        """
+        Read file with data and return the obtained data.
+        """
         with open(path, "r", encoding="utf-8") as file:
             data = file.readlines()
         return data
 
     @staticmethod
     def get_random_words(path, num=10000):
+        """
+        Get random words from the file.
+        """
         data = LinkedBST.get_file_data(path)
         WORDS = random.sample(data, num)
         return WORDS
 
     @staticmethod
     def search_list(words, file_data):
+        """
+        Simply search the list and return the time it has taken.
+        """
         start = time.time()
         for word in words:
             file_data.index(word)
@@ -350,6 +359,9 @@ class LinkedBST(AbstractCollection):
 
     @staticmethod
     def search_bst(words, file_data, should_shuffle=False, should_rebalance=False):
+        """
+        Search binary search tree with different parameters.
+        """
         if should_shuffle:
             random.shuffle(file_data)
 
