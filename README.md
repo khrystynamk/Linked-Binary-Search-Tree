@@ -5,6 +5,7 @@ Repository made for the Linked Binary Search Tree task.
 The main file with the implementation is **linkedbst.py.**
 The rest of the files help with the implementation of LinkedBST class.
 In this class you can find the **demo_bst(path)** method, which, in fact, demonstrates the effectiveness of a binary search tree for solving search problems and compares it to simply searching the list of items.
+The size of the dictionary was decreased to 20000, otherwise the RecursionError would occur.
 
 # Launch example
 
