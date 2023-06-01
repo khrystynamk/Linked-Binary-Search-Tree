@@ -8,7 +8,9 @@ import time
 from abstractcollection import AbstractCollection
 from bstnode import BSTNode
 from linkedstack import LinkedStack
+import sys
 
+sys.setrecursionlimit(10**5)
 
 class LinkedBST(AbstractCollection):
     """An link-based binary search tree implementation."""
@@ -339,11 +341,11 @@ class LinkedBST(AbstractCollection):
         return data
 
     @staticmethod
-    def get_random_words(path, num=10000):
+    def get_random_words(path, num = 10000):
         """
         Get random words from the file.
         """
-        data = LinkedBST.get_file_data(path)
+        data = LinkedBST.get_file_data(path)[:20000]
         WORDS = random.sample(data, num)
         return WORDS
 
@@ -366,7 +368,7 @@ class LinkedBST(AbstractCollection):
             random.shuffle(file_data)
 
         tree = LinkedBST()
-        for word in words:
+        for word in file_data:
             tree.add(word)
 
         if should_rebalance:
@@ -387,7 +389,7 @@ class LinkedBST(AbstractCollection):
         :rtype:
         """
         random_words = LinkedBST.get_random_words(path)
-        file_data = LinkedBST.get_file_data(path)
+        file_data = LinkedBST.get_file_data(path)[:20000]
         durations = (
             LinkedBST.search_list(random_words, file_data),
             LinkedBST.search_bst(random_words, file_data),

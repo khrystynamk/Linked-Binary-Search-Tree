@@ -11,8 +11,8 @@ In this class you can find the **demo_bst(path)** method, which, in fact, demons
 To launch the comparison, simply run the file as the code to execute the program is written at the end of the file.
 
 ```
-List search took: 17.74908208847046sec. 
-BST search for ordered dictionary took: 0.03914189338684082sec.
-BST search for shuffled dictionary took: 0.038536787033081055sec. 
-BST search for balanced dictionary took: 0.03229999542236328sec.
+List search took: 1.2505230903625488sec. 
+BST search for ordered dictionary took: 27.145217895507812sec.
+BST search for shuffled dictionary took: 0.05049300193786621sec. 
+BST search for balanced dictionary took: 0.03928399085998535sec.
 ```
